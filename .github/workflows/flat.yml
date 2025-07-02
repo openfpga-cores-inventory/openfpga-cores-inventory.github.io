@@ -1,0 +1,45 @@
+name: Flat
+
+on:
+  push:
+    paths:
+      - .github/workflows/flat.yml
+  workflow_dispatch: {}
+  schedule:
+    - cron: "*/30 * * * *" # Run every 30 minutes
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: v1.10.x
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://openfpga-library.github.io/analogue-pocket/api/v0/cores.json
+          downloaded_filename: analogue-pocket/api/v0/cores.json
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://openfpga-library.github.io/analogue-pocket/api/v1/cores.json
+          downloaded_filename: analogue-pocket/api/v1/cores.json
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://openfpga-library.github.io/analogue-pocket/api/v2/cores.json
+          downloaded_filename: analogue-pocket/api/v2/cores.json
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://openfpga-library.github.io/analogue-pocket/api/v3/cores.json
+          downloaded_filename: analogue-pocket/api/v3/cores.json
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://openfpga-library.github.io/analogue-pocket/api/v3/platforms.json
+          downloaded_filename: analogue-pocket/api/v3/platforms.json
