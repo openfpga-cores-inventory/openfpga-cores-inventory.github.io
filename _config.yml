@@ -36,7 +36,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 plugins:
-  - jekyll-feed
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default.
