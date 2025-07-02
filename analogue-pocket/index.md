@@ -3,6 +3,5 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-permalink: /analogue-pocket/
 redirect_to: https://openfpga-library.github.io/analogue-pocket/
 ---
