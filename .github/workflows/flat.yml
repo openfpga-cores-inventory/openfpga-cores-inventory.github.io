@@ -20,27 +20,27 @@ jobs:
           deno-version: v1.10.x
       - name: Check out repo
         uses: actions/checkout@v2
-      - name: Fetch data
+      - name: Fetch data - Analogue Pocket v0 Cores
         uses: githubocto/flat@v3
         with:
           http_url: https://openfpga-library.github.io/analogue-pocket/api/v0/cores.json
           downloaded_filename: analogue-pocket/api/v0/cores.json
-      - name: Fetch data
+      - name: Fetch data - Analogue Pocket v1 Cores
         uses: githubocto/flat@v3
         with:
           http_url: https://openfpga-library.github.io/analogue-pocket/api/v1/cores.json
           downloaded_filename: analogue-pocket/api/v1/cores.json
-      - name: Fetch data
+      - name: Fetch data - Analogue Pocket v2 Cores
         uses: githubocto/flat@v3
         with:
           http_url: https://openfpga-library.github.io/analogue-pocket/api/v2/cores.json
           downloaded_filename: analogue-pocket/api/v2/cores.json
-      - name: Fetch data
+      - name: Fetch data - Analogue Pocket v3 Cores
         uses: githubocto/flat@v3
         with:
           http_url: https://openfpga-library.github.io/analogue-pocket/api/v3/cores.json
           downloaded_filename: analogue-pocket/api/v3/cores.json
-      - name: Fetch data
+      - name: Fetch data - Analogue Pocket v3 Platforms
         uses: githubocto/flat@v3
         with:
           http_url: https://openfpga-library.github.io/analogue-pocket/api/v3/platforms.json
